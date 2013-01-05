@@ -1,0 +1,18 @@
+#--- Remove ".example" extension and update your pref and credential
+
+
+# pretty self-explanatory
+EMAIL_TO_NOTIFY: "your_email"
+
+# Gmail credential used to send the mail
+GMAIL_USER: "gmail_username"
+GMAIL_PASSWORD: "gmail_password"
+
+# Devices to observe, a mail will be sent for each one marked with "observed"
+NEXUS_4_8G: "not observed"
+NEXUS_4_16G: "observed"
+NEXUS_7_16G: "observed"
+NEXUS_7_32G: "not observed"
+NEXUS_7_32G_3G: "not observed"
+NEXUS_10_16G: "not observed"
+NEXUS_10_32G: "observed"

@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+
+$:.push File.expand_path("../../lib", __FILE__)
+$:.push File.expand_path("../../conf", __FILE__)
+
+require 'nexus-ping/runner'
+
+NexusPing::Runner.run!

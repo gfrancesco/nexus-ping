@@ -1,0 +1,6 @@
+.rvmrc*
+db/*.sqlite3
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+conf/user_pref.yml
