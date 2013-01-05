@@ -12,8 +12,8 @@ module NexusPing
     def notify_for device
       begin
         if @pinger.ping device
-          subject = "[NexusPing] Google #{device} available!"
-          body = "Product #{device} now back on stock!\n\n"\
+          subject = "[NexusPing] Google #{device} update!"
+          body = "Product #{device} is not sold out anymore!\n\n"\
                  "Time: #{Time.now}\n\n"\
                  "Link to product: #{Conf::PLAY_STORE_BASE_URL + device}"
           @mailer.mail subject, body
