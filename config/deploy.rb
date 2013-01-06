@@ -3,8 +3,6 @@ set :repository,  "git@github.com:gfrancesco/nexus-ping.git"
 set :scm, :git
 set :user, 'deployer'
 
-set :rvm_ruby_string, '1.9.3'
-
 set :deploy_to, "/home/fra/www/app/#{application}"
 set :use_sudo, false
 
