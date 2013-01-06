@@ -1,6 +1,5 @@
 ENV.update YAML.load(File.read(File.expand_path('../user_pref.yml', __FILE__)))
 
-
 module NexusPing
   
   class InvalidIPError < StandardError; end

@@ -20,7 +20,7 @@ set :default_environment, {
 namespace :cron do
   desc "Set system cron with config/cron file."
   task :set do
-    run "crontab /home/fra/www/app/#{application}/current/config/cron"
+    run "crontab #{current_path}/config/cron"
   end
 
   desc "Removes user cronjobs."
@@ -32,14 +32,15 @@ end
 namespace :deploy do
   desc "Copy user specific conf."
   task :conf_copy do
-    run "scp config/user_pref.yml #{user}@kiwit.linode:#{deploy_to}/current/config"  
+    top.upload "config/user_pref.yml", "#{current_path}/config/user_pref.yml"
+    top.upload "config/cron", "#{current_path}/config/cron"
   end
 end
 
 namespace :bundle do
   desc "Clean outdated GEMs."
   task :clean do
-    run "cd #{deploy_to}/current && bundle clean"
+    run "cd #{current_path} && bundle clean"
   end
 end
 

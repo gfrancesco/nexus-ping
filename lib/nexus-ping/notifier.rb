@@ -11,7 +11,7 @@ module NexusPing
 
     def notify_for device
       begin
-        if @pinger.ping device
+        if @pinger.available? device
           subject = "[NexusPing] Google #{device} update!"
           body = "Product #{device} is not sold out anymore!\n\n"\
                  "Time: #{Time.now}\n\n"\

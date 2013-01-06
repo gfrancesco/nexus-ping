@@ -7,7 +7,18 @@ module NexusPing
       @base_url = base_url
     end
 
-    def ping device
+    def available? device
+      if check_stock device
+        false
+      else
+        true
+      end
+    end  
+    
+
+    private
+
+    def check_stock device
       http = Curl.get(@base_url + device)
       
       # Heuristic to check, in a language independent way, if 
